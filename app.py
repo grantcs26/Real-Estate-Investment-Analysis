@@ -1,6 +1,7 @@
 # %%
 import pandas as pd
 import os
+import streamlit as st
 os.makedirs("data", exist_ok=True)
 
 home_csv = "data/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv"
