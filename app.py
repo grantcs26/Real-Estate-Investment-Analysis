@@ -1,12 +1,35 @@
 # %%
 import pandas as pd
+os.makedirs("data", exist_ok=True)
+
+home_csv = "data/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv"
+rent_csv = "data/Metro_zori_uc_sfrcondomfr_sm_month.csv"
+
+# Generate sample data if files do not exist
+if not os.path.isfile(home_csv) or not os.path.isfile(rent_csv):
+    st.warning("Zillow data not found. Generating sample data for demo purposes...")
+
+    # Sample Home Prices CSV
+    home_prices = pd.DataFrame({
+        "RegionName": ["Austin", "Boston", "Chicago", "Denver", "Miami",
+                       "New York", "Philadelphia", "San Francisco", "Seattle", "Washington"],
+        "StateName": ["TX", "MA", "IL", "CO", "FL", "NY", "PA", "CA", "WA", "DC"],
+        "2026-02-01": [450000, 700000, 350000, 500000, 400000, 900000, 300000, 1200000, 650000, 600000]
+    })
+    home_prices.to_csv(home_csv, index=False)
+
+    # Sample Rent Prices CSV
+    rent_prices = pd.DataFrame({
+        "RegionName": ["Austin", "Boston", "Chicago", "Denver", "Miami",
+                       "New York", "Philadelphia", "San Francisco", "Seattle", "Washington"],
+        "2026-02-01": [2200, 3000, 1800, 2500, 2000, 4000, 1700, 4500, 3200, 2900]
+    })
+    rent_prices.to_csv(rent_csv, index=False)
 
 # Home prices
-df = pd.read_csv("data/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv")
+df = pd.read_csv(home_csv)
 df.head()
 df.info()
-
-
 
 # %%
 latest_month = df.columns[-1]
@@ -19,7 +42,7 @@ df.head()
 
 # %%
 # Rent
-rent_df = pd.read_csv("data/Metro_zori_uc_sfrcondomfr_sm_month.csv")
+rent_df = pd.read_csv(rent_csv)
 latest_rent_month = rent_df.columns[-1]
 rent_df = rent_df[["RegionName", latest_rent_month]]
 rent_df.columns = ["City", "Rent_Price"]
