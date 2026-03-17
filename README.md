@@ -1,5 +1,5 @@
 # Real-Estate-Investment-Analysis
-This is a simple tool that uses the most recent recorded and distributed housing data as of Mid March 2026 published by Zillow here: https://www.zillow.com/research/data/
+This is a simple tool that uses the most recent recorded and distributed housing data published by Zillow here: https://www.zillow.com/research/data/
 
 In order to use the tool, please use the link to go to Zillow's page, and download the two datasets:
 
