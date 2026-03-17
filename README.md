@@ -1,5 +1,6 @@
 # Real-Estate-Investment-Analysis
 This is a simple tool that uses the most recent recorded and distributed housing data published by Zillow here: https://www.zillow.com/research/data/
+The tool calculates an Investment Score for each city based on a normalized rent-to-price ratio and rent yield, identifying prime real estate markets.
 
 In order to use the tool, please use the link to go to Zillow's page, and download the two datasets:
 
@@ -7,7 +8,7 @@ Zillow Home Value Index (ZHVI)
 
 Zillow Observed Rent Index (ZORI)
 
-After downloading, save the files in a new folder called "data/"
+After downloading, save the files in a new folder called "data/" that is in the same directory as app.py
 
 You should get something like this:
 
