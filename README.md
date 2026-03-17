@@ -7,6 +7,9 @@ Zillow Observed Rent Index (ZORI)
 After downloading, save the files in a new folder called "data/"
 
 You should get something like this:
+
 data/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+
 data/Metro_zori_uc_sfrcondomfr_sm_month.csv
+
 You can then run the app using Streamlit.
