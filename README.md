@@ -16,6 +16,7 @@ data/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
 
 data/Metro_zori_uc_sfrcondomfr_sm_month.csv
 
-You can then run the app using Streamlit.
+You can then run the app using Streamlit via this link: https://real-estate-investment-analysis-vutdxacdlsmotv9hh2ip6s.streamlit.app/
 
 If you do not download the data, the tool will run using some example data, so you can still see how the tool functions.
+
